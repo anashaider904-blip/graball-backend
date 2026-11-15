@@ -22,6 +22,9 @@ YDL_OPTS = {
     "no_warnings": True,
     "noplaylist": True,
     "socket_timeout": 20,
+      # Cloud IPs get YouTube's "Sign in to confirm you're not a bot" check on
+      # the default web client; the android/tv clients pass without cookies.
+      "extractor_args": {"youtube": {"player_client": ["android", "tv"]}},
 }
 
 
